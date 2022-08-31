@@ -8,22 +8,22 @@
   </head>
   <body>
     <h1>Calcular Gastos</h1>
-    <label for="nome_M" class="form-label">Nome Companhia</label>
-    <input type="text" id="nome_M" class="form-control" name="NomeCompanhia" placeholder="NomeCompanhia"><br>
-    <label for="nome_s" class="form-label">Nome Companhia</label>
-    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="NomeCompanhia"><br>
-    <label for="nome_s" class="form-label">Nome Companhia</label>
-    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="NomeCompanhia"><br>
-    <label for="nome_s" class="form-label">Nome Companhia</label>
-    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="NomeCompanhia"><br>
-    <label for="nome_s" class="form-label">Nome Companhia</label>
-    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="NomeCompanhia"><br>
-    <label for="nome_s" class="form-label">Nome Companhia</label>
-    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="NomeCompanhia"><br>
-    <label for="nome_s" class="form-label">Nome Companhia</label>
-    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="NomeCompanhia"><br>
-    <label for="nome_s" class="form-label">Nome Companhia</label>
-    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="NomeCompanhia"><br>
+    <label for="nome_M" class="form-label">Nome do Motorista</label>
+    <input type="text" id="nome_M" class="form-control" name="NomeCompanhia" placeholder="Nome do Motorista"><br>
+    <label for="nome_s" class="form-label">Modelo do Carro</label>
+    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="Modelo do Carro"><br>
+    <label for="nome_s" class="form-label">Placa do Carro</label>
+    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="Placa do Carro"><br>
+    <label for="nome_s" class="form-label">Local de Origem</label>
+    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="Local de Origem"><br>
+    <label for="nome_s" class="form-label">Local do Destino</label>
+    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="Local do Destino"><br>
+    <label for="nome_s" class="form-label">Gasolina Gasta (Litros)</label>
+    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="Litros"><br>
+    <label for="nome_s" class="form-label">Preço da Gasolina atual</label>
+    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="Preço"><br>
+    <label for="nome_s" class="form-label">Distância Percorrida (KM)</label>
+    <input type="text" id="nome_s" class="form-control" name="NomeCompanhia" placeholder="Distância"><br>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
