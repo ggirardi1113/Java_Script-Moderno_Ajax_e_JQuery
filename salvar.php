@@ -1,7 +1,6 @@
 <?php
-include 'conexao.php';
-    if(isset($_POST['salvar'])){
-        $sql = "INSERT INTO viagem(placa, nome_motorista, modelo_carro, origem, destino, gasolina_gasta, km_rodado, valor_gasilina) 
+include_once 'conexao.php';
+        $sql = "INSERT INTO viagens(placa, nome_motorista, modelo_carro, origem, destino, gasolina_gasta, km_rodado, valor_gasilina) 
         VALUES (:Placa, :NomeMotorista, :Modelo, :Origem, :Destino, :GasolinaGasta, :Distancia, :Preco)";
         $salvar = $conn->prepare($sql);
         $salvar->execute(array(
@@ -14,5 +13,4 @@ include 'conexao.php';
             "Preco"=>$_POST['Preco'],
             "Distancia"=>$_POST['Distancia']
         ));
-    }
 ?>

@@ -1,19 +1,19 @@
 $("#salvar").click(function(){
-    var Preco = parseFloat(document.getElementById("preco").value);
-    var GasolinaGasta = parseFloat(document.getElementById("gasolinaGasta").value);
-    var Distancia = parseFloat(document.getElementById("distancia").value);
+    var Preco = parseFloat(document.getElementById("Preco").value);
+    var GasolinaGasta = parseFloat(document.getElementById("GasolinaGasta").value);
+    var Distancia = parseFloat(document.getElementById("Distancia").value);
     var PrecoFinal = GasolinaGasta*Preco;
     var PrecoKM = PrecoFinal/Distancia;
     document.getElementById("resultado").innerHTML = "Preço total gasto: R$"+PrecoFinal+"<br>Preço por KM rodado: R$"+PrecoKM;
     $.post("salvar.php",
     {
-        NomeMotorista:$("#nomeMotorista").val(),
-        Modelo:$("#modelo").val(),
-        Placa:$("#placa").val(),
-        Origem:$("#origem").val(),
-        Destino:$("#destino").val(),
-        GasolinaGasta:$("#gasolinaGasta").val(),
-        Preco:$("#preco").val(),
+        NomeMotorista:$("#NomeMotorista").val(),
+        Modelo:$("#Modelo").val(),
+        Placa:$("#Placa").val(),
+        Origem:$("#Origem").val(),
+        Destino:$("#Destino").val(),
+        GasolinaGasta:$("#GasolinaGasta").val(),
+        Preco:$("#Preco").val(),
         Distancia:$("#Distancia").val()
     }
     );
