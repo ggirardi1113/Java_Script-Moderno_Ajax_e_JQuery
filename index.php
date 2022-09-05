@@ -4,49 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Viagens</title>
-    <script src="js/jquery-1.8.2.min.js" type="text/javascript" ></script>
     <?php include 'conexao.php';?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
     <h1>Calcular Gastos</h1>
     <form action="" method="post">
-    <label for="NomeMotorista" class="form-label">Nome do Motorista</label>
-    <input type="text" id="NomeMotorista" class="form-control" name="NomeMotorista" placeholder="Nome do Motorista"><br>
-    <label for="Modelo" class="form-label">Modelo do Carro</label>
-    <input type="text" id="Modelo" class="form-control" name="Modelo" placeholder="Modelo do Carro"><br>
-    <label for="Placa" class="form-label">Placa do Carro</label>
-    <input type="text" id="Placa" class="form-control" name="Placa" placeholder="Placa do Carro"><br>
-    <label for="Origem" class="form-label">Local de Origem</label>
-    <input type="text" id="Origem" class="form-control" name="Origem" placeholder="Local de Origem"><br>
-    <label for="Destino" class="form-label">Local do Destino</label>
-    <input type="text" id="Destino" class="form-control" name="Destino" placeholder="Local do Destino"><br>
-    <label for="GasolinaGasta" class="form-label">Gasolina Gasta (Litros)</label>
-    <input type="text" id="GasolinaGasta" class="form-control" name="GasolinaGasta" placeholder="Litros"><br>
-    <label for="Preco" class="form-label">Preço da Gasolina atual</label>
-    <input type="text" id="Preco" class="form-control" name="Preco" placeholder="Preço"><br>
-    <label for="Distancia" class="form-label">Distância Percorrida (KM)</label>
-    <input type="text" id="Distancia" class="form-control" name="Distancia" placeholder="Distância"><br>
-    <input type="submit" value="Salvar" id='salvar'>
+    <label for="nomeMotorista" class="form-label">Nome do Motorista</label>
+    <input type="text" id="nomeMotorista" class="form-control" name="nomeMotorista" placeholder="Nome do Motorista"><br>
+    <label for="modelo" class="form-label">Modelo do Carro</label>
+    <input type="text" id="modelo" class="form-control" name="modelo" placeholder="Modelo do Carro"><br>
+    <label for="placa" class="form-label">Placa do Carro</label>
+    <input type="text" id="placa" class="form-control" name="placa" placeholder="Placa do Carro"><br>
+    <label for="origem" class="form-label">Local de origem</label>
+    <input type="text" id="origem" class="form-control" name="origem" placeholder="Local de origem"><br>
+    <label for="destino" class="form-label">Local do destino</label>
+    <input type="text" id="destino" class="form-control" name="destino" placeholder="Local do destino"><br>
+    <label for="gasolinaGasta" class="form-label">Gasolina Gasta (Litros)</label>
+    <input type="number" id="gasolinaGasta" class="form-control" name="gasolinaGasta" placeholder="Litros"><br>
+    <label for="preco" class="form-label">Preço da Gasolina atual</label>
+    <input type="number" id="preco" class="form-control" name="preco" placeholder="Preço"><br>
+    <label for="distancia" class="form-label">Distância Percorrida (KM)</label>
+    <input type="number" id="distancia" class="form-control" name="distancia" placeholder="Distância"><br>
+    <input type="button" value="salvar" id='salvar'>
     </form>
-    <script type="text/javascript" language="javascript">
-    $(document).ready(function() {
-        /// Quando usuário clicar em salvar será feito todos os passo abaixo
-        $('#salvar').click(function() {
-            var dados = $('#cadUsuario').serialize();
-            $.ajax({
-                type: 'POST',
-                dataType: 'json',
-                url: 'salvar.php',
-                async: true,
-                data: dados,
-                success: function(response) {
-                    location.reload();
-                }
-            });
-        });
-    });
-</script>
+    <p id="resultado"></p>
+
 <?php
     $sql = 'SELECT * FROM viagens';
     $consulta = $conn->prepare($sql);
@@ -57,7 +42,7 @@
         <td>Nome</td>
         <td>Modelo</td>
         <td>Placa</td>
-        <td>Origem</td>
+        <td>origem</td>
         <td>destino</td>
         <td>KM</td>
         <td>Gasilina L</td>
@@ -80,6 +65,6 @@
         }
     ?>
 </table>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
+  <script src="funcoes.js"></script>
 </html>
